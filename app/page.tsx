@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import type { ClientInput, GenerateResponse, LifeContext } from '@/lib/types';
 
@@ -74,6 +75,18 @@ export default function Home() {
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-8 md:py-12">
+      <nav className="mb-6 flex gap-2 text-sm">
+        <span className="rounded-lg border border-emerald-600 bg-emerald-600 px-3 py-1.5 font-medium text-white">
+          🎤 Kịch bản · 話術
+        </span>
+        <Link
+          href="/coach"
+          className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 font-medium text-slate-900 hover:bg-slate-100"
+        >
+          📋 Coach Playbook · 教練手冊
+        </Link>
+      </nav>
+
       <header className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight">
           Coach Herbalife — Công cụ tạo kịch bản
