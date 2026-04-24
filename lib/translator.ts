@@ -18,6 +18,21 @@ const TRANSLATION_SYSTEM_PROMPT = `你是越南文在地化專家，專門處理
 5. 貨幣保留新台幣數字不動（monthly_cost），但文字描述中提到金額時加「(NT$)」即可
 6. 保留所有 emoji 和 hashtag
 
+## 🔑 溝通管道：LINE → Zalo
+**越南客戶主要用 Zalo，不是 LINE**。翻譯時：
+- 所有「LINE」「LINE 群組」「LINE 訊息」→ 譯成 **Zalo** / **nhóm Zalo** / **tin nhắn Zalo**
+- line_template 這個欄位的 JSON key 保留，但**內容是「客戶在 Zalo 打卡貼的貼文」**——越南文版絕不能提 LINE。hashtag 用越南流行的：#HerbalifeViet #QuanLyCanNang #GiamCanKhoaHoc #DinhDuongHerbalife 等
+- next_actions 的跟進管道一律 Zalo（gửi tin nhắn Zalo / nhắn qua Zalo）
+
+## 20 MUST-DO 專有名詞（next_actions 若引用，用越南教練圈標準術語）
+- Fit / Fit club → giữ nguyên Fit club（越南圈通用）
+- talking point → giữ nguyên talking point
+- 敲鐘 → lễ rung chuông
+- 量腰圍拍照 → đo vòng eo chụp ảnh
+- 大使活動 → sự kiện Đại sứ
+- 15 分鐘諮詢 → tư vấn 15 phút
+- MUST-DO 編號註記 → giữ nguyên "(MUST-DO #X)"
+
 ## 越南合規紅線（必須遵守）
 禁用詞（絕對不能出現）：
 - chữa bệnh, điều trị, khỏi bệnh, chữa khỏi

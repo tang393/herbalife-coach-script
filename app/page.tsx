@@ -510,12 +510,17 @@ function ResultView({ data }: { data: GenerateResponse }) {
         </div>
       </Card>
 
-      <Card title="📱 Mẫu check-in LINE" subtitle="LINE 打卡範本（給客戶自己貼）">
+      <Card title="📱 Mẫu check-in Zalo" subtitle="Zalo 打卡範本（越南客戶自己在 Zalo 貼）">
         <div className="space-y-3">
           {vi && (
             <div>
-              <div className="mb-1 text-xs font-bold text-slate-700">Tiếng Việt</div>
-              <div className="rounded-lg bg-[#06C755]/10 p-4">
+              <div className="mb-1 flex items-center gap-2">
+                <span className="rounded bg-emerald-600 px-2 py-0.5 text-xs font-bold text-white">
+                  GỬI CHO KHÁCH HÀNG
+                </span>
+                <span className="text-xs font-bold text-slate-700">Tiếng Việt · 越南文（給客戶貼）</span>
+              </div>
+              <div className="rounded-lg bg-[#0068FF]/10 p-4 ring-1 ring-[#0068FF]/20">
                 <p className="whitespace-pre-wrap leading-relaxed text-slate-900">
                   {vi.line_template}
                 </p>
@@ -524,23 +529,22 @@ function ResultView({ data }: { data: GenerateResponse }) {
                 onClick={() => navigator.clipboard.writeText(vi.line_template)}
                 className="mt-2 rounded border border-slate-300 bg-white px-3 py-1 text-sm font-medium text-slate-900 hover:bg-slate-50"
               >
-                Sao chép tiếng Việt
+                Sao chép · 複製越文
               </button>
             </div>
           )}
           <div>
-            <div className="mb-1 text-xs font-bold text-slate-700">繁體中文</div>
-            <div className="rounded-lg bg-[#06C755]/10 p-4">
-              <p className="whitespace-pre-wrap leading-relaxed text-slate-900">
+            <div className="mb-1 flex items-center gap-2">
+              <span className="rounded bg-slate-400 px-2 py-0.5 text-xs font-bold text-white">
+                對照用
+              </span>
+              <span className="text-xs font-bold text-slate-700">繁體中文（給你 review 用，不是給客戶）</span>
+            </div>
+            <div className="rounded-lg bg-slate-100 p-4 ring-1 ring-slate-200">
+              <p className="whitespace-pre-wrap leading-relaxed text-slate-800">
                 {zh.line_template}
               </p>
             </div>
-            <button
-              onClick={() => navigator.clipboard.writeText(zh.line_template)}
-              className="mt-2 rounded border border-slate-300 bg-white px-3 py-1 text-sm font-medium text-slate-900 hover:bg-slate-50"
-            >
-              複製中文
-            </button>
           </div>
         </div>
       </Card>
